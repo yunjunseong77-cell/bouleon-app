@@ -172,18 +172,15 @@ const guessGenre = (title, artist) => {
 };
 
 // Claude API 호출
-const callClaude = async (prompt, maxTokens=1500) => {
-  const res = await fetch("https://api.anthropic.com/v1/messages", {
-    method:"POST",
-    headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({
-      model:"claude-sonnet-4-20250514",
-      max_tokens:maxTokens,
-      messages:[{role:"user",content:prompt}],
-    }),
+const callClaude = async (prompt) => {
+  const res = await fetch("https://bouleon-api.vercel.app/api/analyze", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ prompt }),
   });
   const data = await res.json();
-  return data.content?.map(c=>c.text||"").join("")||"";
+  if (!data.success) throw new Error(data.error || "API 오류");
+  return data.text;
 };
 
 const parseJSON = text => {
