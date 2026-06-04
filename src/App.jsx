@@ -925,85 +925,135 @@ function MainApp({ user, onLogout }) {
 
   // AI 분석 실행
   const runAnalysis = async () => {
-    const valid = comfSongs.filter(Boolean);
-    if (!valid.length)  { alert("편하게 부르는 곡을 1개 이상 입력해주세요!"); return; }
-    if (!targetSong)    { alert("목표곡을 입력해주세요!"); return; }
+  const valid = comfSongs.filter(Boolean);
+  if (!valid.length) { alert("편하게 부르는 곡을 1개 이상 입력해주세요!"); return; }
+  if (!targetSong)   { alert("목표곡을 입력해주세요!"); return; }
 
-    setLoading(true); setResult(null); setLoadStep(0);
-    const iv = setInterval(()=>setLoadStep(p=>(p+1)%4), 1400);
+  setLoading(true); setResult(null); setLoadStep(0);
+  const iv = setInterval(()=>setLoadStep(p=>(p+1)%4), 1400);
 
-    const sit  = situation ? SITUATIONS.find(s=>s.id===situation) : null;
-    const cond = condition ? CONDITIONS.find(c=>c.id===condition) : null;
+  const sit  = situation ? SITUATIONS.find(s=>s.id===situation) : null;
+  const cond = condition ? CONDITIONS.find(c=>c.id===condition) : null;
 
-    const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
+  // 과거 키 추천 피드백 추출
+  const keyFeedback = history.slice(0, 20)
+    .filter(h => h.rating && h.target?.title && h.result?.recommendedKey)
+    .map(h => `- "${h.target.title}"(${h.target.artist}) → ${h.result.recommendedKey} 추천했을 때 평가: "${h.rating}"`)
+    .join("\n") || "없음";
 
-[입력 정보]
-- 기준곡: ${valid.map(s=>`"${s.title}"(${s.artist}, TJ:${s.tj||"미확인"})`).join(", ")}
-- 목표곡: "${targetSong.title}"(${targetSong.artist}, TJ:${targetSong.tj||"미확인"})
+  // 과거 평가 데이터
+  const pastEvals = ls.get(`bl_eval_${uid}`, []);
+  const evalSummary = pastEvals.slice(0, 10)
+    .map(e => `- "${e.songTitle}": ${e.evals.join(", ")} (${e.date})`)
+    .join("\n") || "없음";
+
+  // 이 목표곡에 대한 이전 추천 기록
+  const prevRec = history.find(h => h.target?.title === targetSong.title);
+  const prevNote = prevRec
+    ? `이전에 "${prevRec.result?.recommendedKey}"로 추천했고 평가는 "${prevRec.rating || "미평가"}"였음`
+    : "이전 기록 없음";
+
+  const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
+사용자의 과거 피드백을 철저히 반영해서 개인화된 키를 추천해주세요.
+
+[⚠️ 과거 키 추천 피드백 - 반드시 반영!]
+${keyFeedback}
+
+규칙:
+- "대참사", "고음이 어려웠어요", "힘들었어요" → 이전 추천보다 1~2키 더 낮게
+- "호흡이 부족했어요" → 이전 추천보다 1키 더 낮게  
+- "편하게 불렀어요" → 현재 키 유지 또는 +1키
+- "다시 부르고 싶어요" → 현재 키 유지
+- "분위기가 좋았어요" → 현재 키 유지
+
+[이 목표곡 이전 기록]
+${prevNote}
+
+[과거 부른 곡 평가]
+${evalSummary}
+
+[현재 입력]
+- 기준곡: ${valid.map(s=>`"${s.title}"(${s.artist}), TJ:${s.tj||"미확인"}`).join(", ")}
+- 목표곡: "${targetSong.title}"(${targetSong.artist}), TJ:${targetSong.tj||"미확인"}
 - 상황: ${sit?sit.emoji+sit.label:"미선택"}
 - 목 컨디션: ${cond?cond.emoji+cond.label:"미선택"}
 - 메모: ${extraNote||"없음"}
 
+[곡 음역 참고 지식]
+기준곡과 목표곡의 실제 음역대, 전조 여부, 고음 구간을 정확히 분석하세요.
+예) 야생화(박효신): Ab장조 시작, 후반 C장조까지 4키 전조, 최고음 C5
+예) 좋은날(아이유): 3단 고음, 최고음 E5, 일반인 -3~-4키 권장
+예) 잘 지내자 우리(거미): 중저음 발라드, 최고음 B4, 편안한 음역
+
+대체곡 추천 시 반드시:
+1. 기준곡과 비슷한 음역대의 곡
+2. 비슷한 분위기/장르
+3. 실제 TJ 노래방 번호 포함
+4. 목표곡보다 약간 쉬운 곡 위주
+
 JSON만 반환 (마크다운 없이):
 {
-  "voiceSummary": "2문장 음역 분석 (친근하게)",
+  "voiceSummary": "기준곡 분석 기반 음역 설명 2문장 (친근하게, 구체적으로)",
   "feasibility": "부르기 쉬움 또는 도전적 또는 키 조절 필수",
-  "recommendedKey": "-2키 형식",
-  "keyLogic": "1~2문장 이유",
-  "conditionTip": ${cond?'"한 문장"':"null"},
-  "situationStrategy": ${sit?'"두 문장"':"null"},
-  "vocalTips": ["팁1","팁2","팁3"],
+  "recommendedKey": "0키 또는 -2키 형식 (과거 피드백 반영)",
+  "keyLogic": "왜 이 키인지 과거 피드백 반영해서 구체적으로",
+  "conditionTip": ${cond?'"컨디션 기반 한 문장 팁"':"null"},
+  "situationStrategy": ${sit?'"상황 기반 두 문장 전략"':"null"},
+  "vocalTips": ["구체적 팁1","구체적 팁2","구체적 팁3"],
   "practiceSteps": [
-    {"step":1,"title":"단계명","desc":"1~2문장"},
-    {"step":2,"title":"단계명","desc":"1~2문장"},
-    {"step":3,"title":"단계명","desc":"1~2문장"}
+    {"step":1,"title":"단계명","desc":"구체적 연습법"},
+    {"step":2,"title":"단계명","desc":"구체적 연습법"},
+    {"step":3,"title":"단계명","desc":"구체적 연습법"}
   ],
-  ${sit?`"setlist": [${sit.roles.map(r=>`{"role":"${r}","title":"곡명","artist":"가수","tj":"TJ번호","reason":"한 줄 이유"}`).join(",")}],`:`"setlist": null,`}
+  ${sit?`"setlist": [${sit.roles.map(r=>`{"role":"${r}","title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"선택이유"}`).join(",")}],`:`"setlist": null,`}
   "alternatives": [
-    {"title":"곡명","artist":"가수","tj":"TJ번호","reason":"이유","matchScore":9},
-    {"title":"곡명","artist":"가수","tj":"TJ번호","reason":"이유","matchScore":8},
-    {"title":"곡명","artist":"가수","tj":"TJ번호","reason":"이유","matchScore":7}
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":9},
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":8},
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":7}
   ],
   "repoTag": "safe 또는 killer 또는 prac 또는 high",
-  "confidence": 7,
+  "confidence": 8,
   "vibes": ["키워드1","키워드2","키워드3"]
 }`;
 
-    try {
-      const text   = await callClaude(prompt, 1800);
-      const parsed = parseJSON(text);
-      const r = parsed || {
-        voiceSummary:"기준곡 분석 결과 중저음 음역이 안정적입니다. 감성 발라드와 R&B 계열이 잘 어울려요.",
-        feasibility:"키 조절 필수",
-        recommendedKey:"-2키",
-        keyLogic:"기준곡 음역 대비 2키 낮추면 편하게 부를 수 있습니다.",
-        conditionTip:null, situationStrategy:null,
-        vocalTips:["후렴 전 깊게 숨 들이쉬기","고음 구간에서 힘 빼기","끝 음절 부드럽게"],
-        practiceSteps:[
-          {step:1,title:"원곡 청취",desc:"원곡 3번 들으며 멜로디 파악"},
-          {step:2,title:"허밍 연습",desc:"추천 키로 전체 허밍"},
-          {step:3,title:"반복 연습",desc:"후렴구 위주 반복 후 전체 연결"},
-        ],
-        setlist:null,
-        alternatives:[
-          {title:"취중고백",artist:"김민석",tj:"23012",reason:"비슷한 감성의 안전한 발라드",matchScore:9},
-          {title:"걱정말아요 그대",artist:"이적",tj:"25080",reason:"따뜻하고 편안한 곡",matchScore:8},
-          {title:"거리에서",artist:"성시경",tj:"16040",reason:"안정적인 중저음 발라드",matchScore:7},
-        ],
-        repoTag:"prac", confidence:7, vibes:["감성","밤","발라드"],
-      };
+  try {
+    const text = await callClaude(prompt);
+    const parsed = parseJSON(text);
+    const r = parsed || {
+      voiceSummary:"분석 중 오류가 발생했어요. 다시 시도해주세요.",
+      feasibility:"키 조절 필수",
+      recommendedKey:"-2키",
+      keyLogic:"기준곡 음역 대비 추천값입니다.",
+      conditionTip:null, situationStrategy:null,
+      vocalTips:["후렴 전 깊게 숨 들이쉬기","고음 구간에서 힘 빼기","끝 음절 부드럽게"],
+      practiceSteps:[
+        {step:1,title:"원곡 청취",desc:"원곡 3번 들으며 멜로디 파악"},
+        {step:2,title:"허밍 연습",desc:"추천 키로 전체 허밍"},
+        {step:3,title:"반복 연습",desc:"후렴구 위주 반복 후 전체 연결"},
+      ],
+      setlist:null,
+      alternatives:[
+        {title:"취중고백",artist:"김민석",tj:"23012",reason:"비슷한 음역의 감성 발라드",matchScore:9},
+        {title:"걱정말아요 그대",artist:"이적",tj:"25080",reason:"따뜻하고 편안한 중저음",matchScore:8},
+        {title:"거리에서",artist:"성시경",tj:"16040",reason:"안정적인 중저음 발라드",matchScore:7},
+      ],
+      repoTag:"prac", confidence:7, vibes:["감성","밤","발라드"],
+    };
 
-      const entry={id:Date.now(),target:targetSong,comfSongs:valid,
-        situation,condition,result:r,date:new Date().toLocaleDateString("ko-KR"),rating:null};
-      setResult(r);
-      saveHistory([entry,...history].slice(0,40));
-      setTab("result");
-    } catch(e) {
-      alert("AI 연결 오류. 잠시 후 다시 시도해주세요.");
-    }
-    clearInterval(iv);
-    setLoading(false);
-  };
+    const entry = {
+      id:Date.now(), target:targetSong, comfSongs:valid,
+      situation, condition, result:r,
+      date:new Date().toLocaleDateString("ko-KR"), rating:null
+    };
+    setResult(r);
+    saveHistory([entry,...history].slice(0,40));
+    setTab("result");
+  } catch(e) {
+    alert("AI 연결 오류. 잠시 후 다시 시도해주세요.");
+  }
+  clearInterval(iv);
+  setLoading(false);
+};
 
   // ── 라이브러리 탭 ─────────────────────────────────────────────
   const LibraryTab = () => {
