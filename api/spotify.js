@@ -1,4 +1,6 @@
+// spotify api
 export default async function handler(req, res) {
+  export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   const clientId = process.env.SPOTIFY_CLIENT_ID;
   const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
