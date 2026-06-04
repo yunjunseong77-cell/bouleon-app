@@ -1,5 +1,38 @@
 import { useState, useEffect, useRef, useCallback } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 
+// ── TJ DB 검색 ──────────────────────────────────────────────────
+let TJ_DB = null;
+
+const loadDB = async () => {
+  if (TJ_DB) return TJ_DB;
+  try {
+    const res = await fetch("/tj_namu.json");
+    TJ_DB = await res.json();
+  } catch(e) {
+    TJ_DB = [];
+  }
+  return TJ_DB;
+};
+
+const searchDB = async (query) => {
+  const db = await loadDB();
+  if (!query || !db.length) return [];
+  const q = query.toLowerCase().trim();
+  return db.filter(s =>
+    s.title?.toLowerCase().includes(q) ||
+    s.artist?.toLowerCase().includes(q) ||
+    s.tj === q
+  ).slice(0, 20).map(s => ({
+    ...s,
+    id: "tj_" + s.tj,
+    genre: "발라드",
+    difficulty: 2,
+    energy: 2,
+    minNote: 48,
+    maxNote: 67,
+  }));
+};
 // ─────────────────────────────────────────────────────────────────
 // ⚙️  API 베이스 URL — Vercel 배포 후 여기만 바꾸면 됩니다
 // ─────────────────────────────────────────────────────────────────
