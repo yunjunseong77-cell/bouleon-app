@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef, useCallback } from "react";
-import { useState, useEffect, useRef, useCallback } from "react";
 
 // ── TJ DB 검색 ──────────────────────────────────────────────────
 let TJ_DB = null;
@@ -256,22 +255,15 @@ const SongSearchInput = ({ label, value, onChange, placeholder }) => {
     setOpen(true);
 
     // 300ms 디바운스 (TJ API는 빠르니까 짧게)
-    timer.current = setTimeout(async () => {
-      try {
-        // 곡명으로 먼저 검색
-        let res = await searchTJ(query, "1");
-
-        // 결과 없으면 가수명으로도 검색
-        if (res.length === 0) {
-          res = await searchTJ(query, "2");
-        }
-
-        setResults(res);
-        setStatus(res.length > 0 ? "done" : "empty");
-      } catch(e) {
-        setStatus("error");
-      }
-    }, 300);
+timer.current = setTimeout(async () => {
+  try {
+    const res = await searchDB(query);
+    setResults(res);
+    setStatus(res.length > 0 ? "done" : "empty");
+  } catch(e) {
+    setStatus("error");
+  }
+}, 300);
   }, []);
 
   const pick = (s) => {
