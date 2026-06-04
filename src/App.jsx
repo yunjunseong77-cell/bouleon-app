@@ -1,37 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 
-// ── TJ DB 검색 ──────────────────────────────────────────────────
-let TJ_DB = null;
-
-const loadDB = async () => {
-  if (TJ_DB) return TJ_DB;
-  try {
-    const res = await fetch("/tj_namu.json");
-    TJ_DB = await res.json();
-  } catch(e) {
-    TJ_DB = [];
-  }
-  return TJ_DB;
-};
-
-const searchDB = async (query) => {
-  const db = await loadDB();
-  if (!query || !db.length) return [];
-  const q = query.toLowerCase().trim();
-  return db.filter(s =>
-    s.title?.toLowerCase().includes(q) ||
-    s.artist?.toLowerCase().includes(q) ||
-    s.tj === q
-  ).slice(0, 20).map(s => ({
-    ...s,
-    id: "tj_" + s.tj,
-    genre: "발라드",
-    difficulty: 2,
-    energy: 2,
-    minNote: 48,
-    maxNote: 67,
-  }));
-};
 // ─────────────────────────────────────────────────────────────────
 // ⚙️  API 베이스 URL — Vercel 배포 후 여기만 바꾸면 됩니다
 // ─────────────────────────────────────────────────────────────────
@@ -129,6 +97,15 @@ const EVAL_OPTIONS = [
   { id:"skip",   emoji:"🚫", label:"다시 안 부를래요",  color:C.rose  },
 ];
 
+const VOICE_TYPES = [
+  { id:"male_low",   label:"남성 저음",  emoji:"🎸", desc:"낮고 묵직한 목소리" },
+  { id:"male_mid",   label:"남성 중음",  emoji:"🎤", desc:"평균적인 남성 음역" },
+  { id:"male_high",  label:"남성 고음",  emoji:"🚀", desc:"고음이 잘 나오는 남성" },
+  { id:"female_low", label:"여성 저음",  emoji:"🎵", desc:"낮고 허스키한 목소리" },
+  { id:"female_mid", label:"여성 중음",  emoji:"🌸", desc:"평균적인 여성 음역" },
+  { id:"female_high",label:"여성 고음",  emoji:"⭐", desc:"고음이 잘 나오는 여성" },
+];
+
 // ─────────────────────────────────────────────────────────────────
 // LOCAL STORAGE
 // ─────────────────────────────────────────────────────────────────
@@ -136,6 +113,27 @@ const ls = {
   get:(k,fb)=>{ try{ return JSON.parse(localStorage.getItem(k))??fb; }catch{ return fb; } },
   set:(k,v)=>localStorage.setItem(k,JSON.stringify(v)),
   del:(k)=>localStorage.removeItem(k),
+};
+
+// ── TJ DB 검색 ──────────────────────────────────────────────────
+let TJ_DB = null;
+const loadDB = async () => {
+  if (TJ_DB) return TJ_DB;
+  try {
+    const res = await fetch("/tj_namu.json");
+    TJ_DB = await res.json();
+  } catch(e) { TJ_DB = []; }
+  return TJ_DB;
+};
+const searchDB = async (query) => {
+  const db = await loadDB();
+  if (!query || !db.length) return [];
+  const q = query.toLowerCase().trim();
+  return db.filter(s =>
+    s.title?.toLowerCase().includes(q) ||
+    s.artist?.toLowerCase().includes(q) ||
+    s.tj === q
+  ).slice(0, 20).map(s => ({...s, id:"tj_"+s.tj}));
 };
 
 // ─────────────────────────────────────────────────────────────────
@@ -171,7 +169,7 @@ const guessGenre = (title, artist) => {
   return "발라드";
 };
 
-// Claude API 호출
+// Gemini API 호출 (bouleon-api 서버 통해서)
 const callClaude = async (prompt) => {
   const res = await fetch("https://bouleon-api.vercel.app/api/analyze", {
     method: "POST",
@@ -251,16 +249,15 @@ const SongSearchInput = ({ label, value, onChange, placeholder }) => {
     setStatus("searching");
     setOpen(true);
 
-    // 300ms 디바운스 (TJ API는 빠르니까 짧게)
-timer.current = setTimeout(async () => {
-  try {
-    const res = await searchDB(query);
-    setResults(res);
-    setStatus(res.length > 0 ? "done" : "empty");
-  } catch(e) {
-    setStatus("error");
-  }
-}, 300);
+    timer.current = setTimeout(async () => {
+      try {
+        const res = await searchDB(query);
+        setResults(res);
+        setStatus(res.length > 0 ? "done" : "empty");
+      } catch(e) {
+        setStatus("error");
+      }
+    }, 300);
   }, []);
 
   const pick = (s) => {
@@ -482,7 +479,7 @@ const HomeTab = ({
   comfSongs, setComfSongs, targetSong, setTargetSong,
   situation, setSituation, condition, setCondition,
   extraNote, setExtraNote, quickMode, setQuickMode,
-  loading, loadStep, onRun
+  loading, loadStep, onRun, voiceType, onGoProfile
 }) => {
   const LOAD_MSGS=["🎵 목소리 패턴 분석 중...","🎹 최적 키 계산하는 중...","🎭 상황별 전략 수립 중...","✨ 나만의 가이드 작성 중..."];
 
@@ -508,6 +505,22 @@ const HomeTab = ({
           background:"rgba(124,106,247,0.2)",border:`1px solid ${C.borderHi}`}}>
           <span style={{fontSize:11,color:C.accent,fontWeight:600}}>🎵 TJ미디어 실제 DB 연동</span>
         </div>
+        {/* 음역 미설정 경고 */}
+        {!voiceType && (
+          <div onClick={onGoProfile}
+            style={{marginTop:10,padding:"8px 12px",borderRadius:10,cursor:"pointer",
+              background:"rgba(245,158,11,0.1)",border:"1px solid rgba(245,158,11,0.3)",
+              fontSize:12,color:C.amber,display:"flex",alignItems:"center",gap:6}}>
+            ⚠️ 프로필에서 음역대 설정하면 키 추천이 더 정확해요! →
+          </div>
+        )}
+        {voiceType && (
+          <div style={{marginTop:10,padding:"6px 12px",borderRadius:10,
+            background:"rgba(124,106,247,0.15)",border:`1px solid ${C.borderHi}`,
+            fontSize:12,color:C.accent}}>
+            🎤 {VOICE_TYPES.find(v=>v.id===voiceType)?.label} 음역으로 분석합니다
+          </div>
+        )}
         {/* 빠른/정밀 토글 */}
         <div style={{display:"flex",gap:8,marginTop:12}}>
           {[{v:true,l:"⚡ 빠른 추천"},{v:false,l:"🎯 정밀 추천"}].map(m=>(
@@ -919,86 +932,105 @@ function MainApp({ user, onLogout }) {
 
   const [repo,    setRepo]    = useState(()=>ls.get(`bl_repo_${uid}`   ,[]));
   const [history, setHistory] = useState(()=>ls.get(`bl_hist_${uid}`   ,[]));
+  const [voiceType, setVoiceType] = useState(()=>ls.get(`bl_voice_${uid}`, null));
 
   const saveRepo    = r=>{ setRepo(r);    ls.set(`bl_repo_${uid}`,r);    };
   const saveHistory = h=>{ setHistory(h); ls.set(`bl_hist_${uid}`,h); };
+  const saveVoiceType = v=>{ setVoiceType(v); ls.set(`bl_voice_${uid}`,v); };
 
   // AI 분석 실행
   const runAnalysis = async () => {
-  const valid = comfSongs.filter(Boolean);
-  if (!valid.length) { alert("편하게 부르는 곡을 1개 이상 입력해주세요!"); return; }
-  if (!targetSong)   { alert("목표곡을 입력해주세요!"); return; }
+    const valid = comfSongs.filter(Boolean);
+    if (!valid.length) { alert("편하게 부르는 곡을 1개 이상 입력해주세요!"); return; }
+    if (!targetSong)   { alert("목표곡을 입력해주세요!"); return; }
 
-  setLoading(true); setResult(null); setLoadStep(0);
-  const iv = setInterval(()=>setLoadStep(p=>(p+1)%4), 1400);
+    setLoading(true); setResult(null); setLoadStep(0);
+    const iv = setInterval(()=>setLoadStep(p=>(p+1)%4), 1400);
 
-  const sit  = situation ? SITUATIONS.find(s=>s.id===situation) : null;
-  const cond = condition ? CONDITIONS.find(c=>c.id===condition) : null;
+    const sit  = situation ? SITUATIONS.find(s=>s.id===situation) : null;
+    const cond = condition ? CONDITIONS.find(c=>c.id===condition) : null;
+    const voice = voiceType ? VOICE_TYPES.find(v=>v.id===voiceType) : null;
 
-  // 과거 키 추천 피드백 추출
-  const keyFeedback = history.slice(0, 20)
-    .filter(h => h.rating && h.target?.title && h.result?.recommendedKey)
-    .map(h => `- "${h.target.title}"(${h.target.artist}) → ${h.result.recommendedKey} 추천했을 때 평가: "${h.rating}"`)
-    .join("\n") || "없음";
+    // 과거 키 추천 피드백 추출
+    const keyFeedback = history.slice(0, 20)
+      .filter(h => h.rating && h.target?.title && h.result?.recommendedKey)
+      .map(h => `- "${h.target.title}"(${h.target.artist}) → ${h.result.recommendedKey} 추천 → 평가: "${h.rating}"`)
+      .join("\n") || "없음";
 
-  // 과거 평가 데이터
-  const pastEvals = ls.get(`bl_eval_${uid}`, []);
-  const evalSummary = pastEvals.slice(0, 10)
-    .map(e => `- "${e.songTitle}": ${e.evals.join(", ")} (${e.date})`)
-    .join("\n") || "없음";
+    // 이 목표곡에 대한 이전 추천 기록
+    const prevRec = history.find(h => h.target?.title === targetSong.title);
+    const prevNote = prevRec
+      ? `이전에 "${prevRec.result?.recommendedKey}"로 추천했고 평가는 "${prevRec.rating || "미평가"}"였음`
+      : "이전 기록 없음";
 
-  // 이 목표곡에 대한 이전 추천 기록
-  const prevRec = history.find(h => h.target?.title === targetSong.title);
-  const prevNote = prevRec
-    ? `이전에 "${prevRec.result?.recommendedKey}"로 추천했고 평가는 "${prevRec.rating || "미평가"}"였음`
-    : "이전 기록 없음";
+    // 과거 평가 데이터
+    const pastEvals = ls.get(`bl_eval_${uid}`, []);
+    const evalSummary = pastEvals.slice(0, 10)
+      .map(e => `- "${e.songTitle}": ${e.evals.join(", ")} (${e.date})`)
+      .join("\n") || "없음";
 
-  const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
-사용자의 과거 피드백을 철저히 반영해서 개인화된 키를 추천해주세요.
+    const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
+사용자의 과거 피드백과 음역대를 철저히 반영해서 개인화된 키를 추천해주세요.
+
+[⚠️ 사용자 음역 정보 - 가장 중요!]
+음역 타입: ${voice ? voice.label + " (" + voice.desc + ")" : "미설정 (기준곡으로 추측)"}
+${voice?.id?.includes("male") ? "※ 남성 사용자입니다. 여성 가수 곡은 반드시 낮게 조절하세요." : ""}
+${voice?.id?.includes("female") ? "※ 여성 사용자입니다. 남성 가수 곡은 반드시 높게 조절하세요." : ""}
+
+음역별 키 조절 기준:
+- 남성 저음: 여성곡 -5~-6키, 남성곡 -1~-2키
+- 남성 중음: 여성곡 -4~-5키, 남성곡 0~-1키
+- 남성 고음: 여성곡 -3~-4키, 남성곡 0~+1키
+- 여성 저음: 남성곡 +4~+5키, 여성곡 -1~-2키
+- 여성 중음: 남성곡 +5~+6키, 여성곡 0키
+- 여성 고음: 남성곡 +6~+7키, 여성곡 0~+1키
 
 [⚠️ 과거 키 추천 피드백 - 반드시 반영!]
 ${keyFeedback}
 
-규칙:
-- "대참사", "고음이 어려웠어요", "힘들었어요" → 이전 추천보다 1~2키 더 낮게
-- "호흡이 부족했어요" → 이전 추천보다 1키 더 낮게  
-- "편하게 불렀어요" → 현재 키 유지 또는 +1키
-- "다시 부르고 싶어요" → 현재 키 유지
+피드백 반영 규칙:
+- "대참사", "고음이 어려웠어요" → 이전 추천보다 1~2키 더 낮게
+- "호흡이 부족했어요" → 이전 추천보다 1키 더 낮게
+- "편하게 불렀어요", "다시 부르고 싶어요" → 현재 키 유지
 - "분위기가 좋았어요" → 현재 키 유지
 
 [이 목표곡 이전 기록]
 ${prevNote}
 
-[과거 부른 곡 평가]
+[과거 평가]
 ${evalSummary}
 
 [현재 입력]
-- 기준곡: ${valid.map(s=>`"${s.title}"(${s.artist}), TJ:${s.tj||"미확인"}`).join(", ")}
+- 기준곡: ${valid.map(s=>`"${s.title}"(${s.artist})`).join(", ")}
 - 목표곡: "${targetSong.title}"(${targetSong.artist}), TJ:${targetSong.tj||"미확인"}
 - 상황: ${sit?sit.emoji+sit.label:"미선택"}
 - 목 컨디션: ${cond?cond.emoji+cond.label:"미선택"}
 - 메모: ${extraNote||"없음"}
 
-[곡 음역 참고 지식]
-기준곡과 목표곡의 실제 음역대, 전조 여부, 고음 구간을 정확히 분석하세요.
-예) 야생화(박효신): Ab장조 시작, 후반 C장조까지 4키 전조, 최고음 C5
-예) 좋은날(아이유): 3단 고음, 최고음 E5, 일반인 -3~-4키 권장
-예) 잘 지내자 우리(거미): 중저음 발라드, 최고음 B4, 편안한 음역
+[곡별 실제 음역 지식]
+- 야생화(박효신): Ab장조 시작→후반 C장조(4키 전조), 최고음 C5, 남성 중음 기준 -1~-2키
+- 좋은날(아이유): 3단 고음, 최고음 E5, 남성 중음 기준 -5키, 여성 중음 기준 0키
+- 잘지내자 우리(거미): 중저음 발라드, 최고음 B4, 남성 중음 기준 +3~+4키
+- 사랑했지만(김광석): 중저음, 최고음 G4, 남성 중음 기준 0~-1키
+- 봄날(방탄소년단): 중고음, 최고음 D5, 남성 중음 기준 -2~-3키
+- 밤편지(아이유): 중음, 최고음 C#5, 남성 중음 기준 -4키
+- 너를 원해(Crush): 중저음 R&B, 최고음 A4, 남성 중음 기준 0키
+- 거리에서(성시경): 중저음 발라드, 최고음 G4, 남성 중음 기준 0키
 
 대체곡 추천 시 반드시:
-1. 기준곡과 비슷한 음역대의 곡
-2. 비슷한 분위기/장르
-3. 실제 TJ 노래방 번호 포함
-4. 목표곡보다 약간 쉬운 곡 위주
+1. 사용자 음역에 맞는 곡 (성별 고려!)
+2. 기준곡과 비슷한 분위기/장르
+3. 실제 TJ 노래방 번호 정확하게
+4. 목표곡보다 약간 쉬운 음역의 곡
 
 JSON만 반환 (마크다운 없이):
 {
-  "voiceSummary": "기준곡 분석 기반 음역 설명 2문장 (친근하게, 구체적으로)",
+  "voiceSummary": "음역 분석 2문장 (성별+음역 타입 기반, 친근하게)",
   "feasibility": "부르기 쉬움 또는 도전적 또는 키 조절 필수",
-  "recommendedKey": "0키 또는 -2키 형식 (과거 피드백 반영)",
-  "keyLogic": "왜 이 키인지 과거 피드백 반영해서 구체적으로",
-  "conditionTip": ${cond?'"컨디션 기반 한 문장 팁"':"null"},
-  "situationStrategy": ${sit?'"상황 기반 두 문장 전략"':"null"},
+  "recommendedKey": "0키 또는 -2키 또는 +3키 형식 (과거 피드백+음역 반영)",
+  "keyLogic": "왜 이 키인지 과거 피드백과 음역 기반으로 구체적으로",
+  "conditionTip": ${cond?'"컨디션 기반 한 문장"':"null"},
+  "situationStrategy": ${sit?'"상황 기반 두 문장"':"null"},
   "vocalTips": ["구체적 팁1","구체적 팁2","구체적 팁3"],
   "practiceSteps": [
     {"step":1,"title":"단계명","desc":"구체적 연습법"},
@@ -1007,53 +1039,53 @@ JSON만 반환 (마크다운 없이):
   ],
   ${sit?`"setlist": [${sit.roles.map(r=>`{"role":"${r}","title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"선택이유"}`).join(",")}],`:`"setlist": null,`}
   "alternatives": [
-    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":9},
-    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":8},
-    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교 이유","matchScore":7}
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교","matchScore":9},
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교","matchScore":8},
+    {"title":"실제곡명","artist":"실제가수","tj":"실제TJ번호","reason":"음역/분위기 비교","matchScore":7}
   ],
   "repoTag": "safe 또는 killer 또는 prac 또는 high",
   "confidence": 8,
   "vibes": ["키워드1","키워드2","키워드3"]
 }`;
 
-  try {
-    const text = await callClaude(prompt);
-    const parsed = parseJSON(text);
-    const r = parsed || {
-      voiceSummary:"분석 중 오류가 발생했어요. 다시 시도해주세요.",
-      feasibility:"키 조절 필수",
-      recommendedKey:"-2키",
-      keyLogic:"기준곡 음역 대비 추천값입니다.",
-      conditionTip:null, situationStrategy:null,
-      vocalTips:["후렴 전 깊게 숨 들이쉬기","고음 구간에서 힘 빼기","끝 음절 부드럽게"],
-      practiceSteps:[
-        {step:1,title:"원곡 청취",desc:"원곡 3번 들으며 멜로디 파악"},
-        {step:2,title:"허밍 연습",desc:"추천 키로 전체 허밍"},
-        {step:3,title:"반복 연습",desc:"후렴구 위주 반복 후 전체 연결"},
-      ],
-      setlist:null,
-      alternatives:[
-        {title:"취중고백",artist:"김민석",tj:"23012",reason:"비슷한 음역의 감성 발라드",matchScore:9},
-        {title:"걱정말아요 그대",artist:"이적",tj:"25080",reason:"따뜻하고 편안한 중저음",matchScore:8},
-        {title:"거리에서",artist:"성시경",tj:"16040",reason:"안정적인 중저음 발라드",matchScore:7},
-      ],
-      repoTag:"prac", confidence:7, vibes:["감성","밤","발라드"],
-    };
+    try {
+      const text = await callClaude(prompt);
+      const parsed = parseJSON(text);
+      const r = parsed || {
+        voiceSummary:"분석 중 오류가 발생했어요. 다시 시도해주세요.",
+        feasibility:"키 조절 필수",
+        recommendedKey:"-2키",
+        keyLogic:"기준곡 음역 대비 추천값입니다.",
+        conditionTip:null, situationStrategy:null,
+        vocalTips:["후렴 전 깊게 숨 들이쉬기","고음 구간에서 힘 빼기","끝 음절 부드럽게"],
+        practiceSteps:[
+          {step:1,title:"원곡 청취",desc:"원곡 3번 들으며 멜로디 파악"},
+          {step:2,title:"허밍 연습",desc:"추천 키로 전체 허밍"},
+          {step:3,title:"반복 연습",desc:"후렴구 위주 반복 후 전체 연결"},
+        ],
+        setlist:null,
+        alternatives:[
+          {title:"취중고백",artist:"김민석",tj:"23012",reason:"비슷한 음역의 감성 발라드",matchScore:9},
+          {title:"걱정말아요 그대",artist:"이적",tj:"25080",reason:"따뜻하고 편안한 중저음",matchScore:8},
+          {title:"거리에서",artist:"성시경",tj:"16040",reason:"안정적인 중저음 발라드",matchScore:7},
+        ],
+        repoTag:"prac", confidence:7, vibes:["감성","밤","발라드"],
+      };
 
-    const entry = {
-      id:Date.now(), target:targetSong, comfSongs:valid,
-      situation, condition, result:r,
-      date:new Date().toLocaleDateString("ko-KR"), rating:null
-    };
-    setResult(r);
-    saveHistory([entry,...history].slice(0,40));
-    setTab("result");
-  } catch(e) {
-    alert("AI 연결 오류. 잠시 후 다시 시도해주세요.");
-  }
-  clearInterval(iv);
-  setLoading(false);
-};
+      const entry = {
+        id:Date.now(), target:targetSong, comfSongs:valid,
+        situation, condition, result:r,
+        date:new Date().toLocaleDateString("ko-KR"), rating:null
+      };
+      setResult(r);
+      saveHistory([entry,...history].slice(0,40));
+      setTab("result");
+    } catch(e) {
+      alert("AI 연결 오류. 잠시 후 다시 시도해주세요.");
+    }
+    clearInterval(iv);
+    setLoading(false);
+  };
 
   // ── 라이브러리 탭 ─────────────────────────────────────────────
   const LibraryTab = () => {
@@ -1259,6 +1291,38 @@ JSON만 반환 (마크다운 없이):
           <div style={{fontSize:18,fontWeight:800}}>{user.name||"사용자"}</div>
           <div style={{fontSize:12,color:C.mid,marginTop:3}}>{user.email}</div>
         </div>
+
+        {/* 음역대 설정 */}
+        <div style={{...S.card,marginBottom:14}}>
+          <div style={{fontSize:14,fontWeight:700,marginBottom:4}}>🎤 내 음역대 설정</div>
+          <div style={{fontSize:12,color:C.dim,marginBottom:12}}>정확한 키 추천을 위해 설정해주세요!</div>
+          <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8}}>
+            {VOICE_TYPES.map(v=>(
+              <div key={v.id} onClick={()=>saveVoiceType(v.id)}
+                style={{...S.chip(voiceType===v.id,C.accent),
+                  display:"flex",flexDirection:"column",alignItems:"center",
+                  gap:4,padding:"10px 6px",borderRadius:14,textAlign:"center",cursor:"pointer"}}>
+                <span style={{fontSize:20}}>{v.emoji}</span>
+                <span style={{fontSize:11,fontWeight:700}}>{v.label}</span>
+                <span style={{fontSize:9,color:voiceType===v.id?"rgba(255,255,255,0.7)":C.dim}}>{v.desc}</span>
+              </div>
+            ))}
+          </div>
+          {voiceType ? (
+            <div style={{marginTop:10,padding:"8px 12px",borderRadius:10,
+              background:C.accentDim,border:`1px solid ${C.borderHi}`,
+              fontSize:12,color:C.accent,textAlign:"center"}}>
+              ✅ {VOICE_TYPES.find(v=>v.id===voiceType)?.label} 설정됨 — 키 추천에 반영돼요!
+            </div>
+          ) : (
+            <div style={{marginTop:10,padding:"8px 12px",borderRadius:10,
+              background:"rgba(245,158,11,0.1)",border:"1px solid rgba(245,158,11,0.3)",
+              fontSize:12,color:C.amber,textAlign:"center"}}>
+              ⚠️ 음역대를 설정하면 키 추천이 훨씬 정확해져요!
+            </div>
+          )}
+        </div>
+
         <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginBottom:14}}>
           {[{icon:"🎯",label:"분석 횟수",val:history.length},
             {icon:"⭐",label:"평균 확신도",val:avgConf?`${avgConf}/10`:"-"},
@@ -1344,6 +1408,8 @@ JSON만 반환 (마크다운 없이):
             quickMode={quickMode} setQuickMode={setQuickMode}
             loading={loading} loadStep={loadStep}
             onRun={runAnalysis}
+            voiceType={voiceType}
+            onGoProfile={()=>setTab("profile")}
           />
         )}
         {tab==="result"&&(
