@@ -1105,7 +1105,6 @@ JSON만 반환 (마크다운 없이):
   "feasibility": "부르기 쉬움 또는 도전적 또는 키 조절 필수",
   "recommendedKey": "${calcKeyStr}",
   "keyLogic": "왜 이 키인지 수치 근거 포함해서 구체적으로",
-  "keyBreakdown": ${JSON.stringify(keyBreakdown).replace(/"/g,"'")},
   "conditionTip": ${cond?'"컨디션 기반 한 문장"':"null"},
   "situationStrategy": ${sit?'"상황 기반 두 문장"':"null"},
   "vocalTips": ["구체적 팁1","구체적 팁2","구체적 팁3"],
