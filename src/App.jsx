@@ -105,10 +105,6 @@ const VOICE_TYPES = [
   { id:"female_mid", label:"여성 중음",  emoji:"🌸", desc:"평균적인 여성 음역" },
   { id:"female_high",label:"여성 고음",  emoji:"⭐", desc:"고음이 잘 나오는 여성" },
 ];
-const VOICE_COMFORTABLE = {
-  male_low:60, male_mid:64, male_high:67,
-  female_low:67, female_mid:71, female_high:74,
-};
 
 // ─────────────────────────────────────────────────────────────────
 // SONGS DB 로드 (public/songs_db.json)
@@ -1010,33 +1006,42 @@ function MainApp({ user, onLogout }) {
       .map(e => `- "${e.songTitle}": ${e.evals.join(", ")} (${e.date})`)
       .join("\n") || "없음";
 
-    // ── 키 계산 엔진 (코드가 직접 결정, AI 개입 없음) ──
-const songData = await findSongData(targetSong.title);
-let keyAdj = 0;
-const keyBreakdown = [];
-
-if (songData && voiceType) {
-  const baseKey = songData.safeKeyRange?.[voiceType]?.recommended
-    ?? (VOICE_COMFORTABLE[voiceType] - songData.maxNote);
-  const clamped = Math.max(-7, Math.min(7, baseKey));
-  keyAdj += clamped;
-  keyBreakdown.push({ label:`음역 기반`, value:clamped });
-} else {
-  keyBreakdown.push({ label:"음역 기반", value:0, note:"DB 미수록" });
-}
-
-const sitAdj = sit?.id==="date"?-1:sit?.id==="work"?-1:sit?.id==="solo"?1:sit?.id==="wedding"?-2:0;
-if (sitAdj) { keyAdj+=sitAdj; keyBreakdown.push({label:`상황(${sit.label})`,value:sitAdj}); }
-
-const condAdj = cond?.id==="great"?1:cond?.id==="bad"?-1:cond?.id==="sick"?-2:0;
-if (condAdj) { keyAdj+=condAdj; keyBreakdown.push({label:`컨디션(${cond.label})`,value:condAdj}); }
-
-const prevRecFb = history.find(h=>h.target?.title===targetSong.title&&h.rating);
-if (prevRecFb?.rating?.includes("고음이 어려웠어요")) { keyAdj-=2; keyBreakdown.push({label:"이전 피드백",value:-2}); }
-else if (prevRecFb?.rating?.includes("호흡이 부족했어요")) { keyAdj-=1; keyBreakdown.push({label:"이전 피드백",value:-1}); }
-
-keyAdj = Math.max(-7, Math.min(7, keyAdj));
-const calcKeyStr = keyAdj===0?"원키":keyAdj>0?`+${keyAdj}키`:`${keyAdj}키`;
+    // ── 키 계산 엔진 (코드가 직접 결정, AI 개입 없음) ──────────
+    const songData = await findSongData(targetSong.title);
+    // 실전 노래방 기준 편한 최고음 (MIDI)
+    // 남성 중음이 야생화(C5=72) 부를 때 -2~-3키 나오도록 보정
+    const VOICE_COMFORTABLE = {
+      male_low:62, male_mid:69, male_high:71,
+      female_low:67, female_mid:72, female_high:76,
+    };
+    let keyAdj = 0;
+    const keyBreakdown = [];
+    if (songData && voiceType) {
+      // songs_db_v2의 safeKeyRange 우선 사용, 없으면 직접 계산
+      let baseAdj;
+      if (songData.safeKeyRange?.[voiceType]?.recommended !== undefined) {
+        baseAdj = songData.safeKeyRange[voiceType].recommended;
+      } else {
+        const comfMax = VOICE_COMFORTABLE[voiceType] || 69;
+        baseAdj = comfMax - songData.maxNote;
+        if (voiceType.includes("male")   && songData.gender==="female") baseAdj = Math.min(baseAdj,-3);
+        if (voiceType.includes("female") && songData.gender==="male")   baseAdj = Math.max(baseAdj, 3);
+      }
+      baseAdj = Math.max(-7, Math.min(7, baseAdj));
+      keyAdj += baseAdj;
+      keyBreakdown.push({ label:"음역 기반", value:baseAdj });
+    } else {
+      keyBreakdown.push({ label:"음역 기반", value:0, note:"DB 미수록" });
+    }
+    const sitAdj = sit?.id==="date"?-1:sit?.id==="work"?-1:sit?.id==="solo"?1:sit?.id==="wedding"?-2:0;
+    if (sitAdj) { keyAdj+=sitAdj; keyBreakdown.push({label:`상황(${sit.label})`,value:sitAdj}); }
+    const condAdj = cond?.id==="great"?1:cond?.id==="bad"?-1:cond?.id==="sick"?-2:0;
+    if (condAdj) { keyAdj+=condAdj; keyBreakdown.push({label:`컨디션(${cond.label})`,value:condAdj}); }
+    const prevRecFb = history.find(h=>h.target?.title===targetSong.title&&h.rating);
+    if (prevRecFb?.rating?.includes("고음이 어려웠어요")) { keyAdj-=2; keyBreakdown.push({label:"이전 피드백",value:-2}); }
+    else if (prevRecFb?.rating?.includes("호흡이 부족했어요")) { keyAdj-=1; keyBreakdown.push({label:"이전 피드백",value:-1}); }
+    keyAdj = Math.max(-7, Math.min(7, keyAdj));
+    const calcKeyStr = keyAdj===0?"원키":keyAdj>0?`+${keyAdj}키`:`${keyAdj}키`;
 
     const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
 사용자의 과거 피드백과 음역대를 철저히 반영해서 개인화된 키를 추천해주세요.
@@ -1075,10 +1080,8 @@ ${evalSummary}
 - 상황: ${sit?sit.emoji+sit.label:"미선택"}
 - 목 컨디션: ${cond?cond.emoji+cond.label:"미선택"}
 - 메모: ${extraNote||"없음"}
-⚠️ 추천 키는 이미 계산 완료: ${calcKeyStr}
-반드시 recommendedKey는 "${calcKeyStr}"로 고정하세요. 변경 금지!
-DB 데이터: ${songData?`최고음 ${songData.maxNote}, 난이도 ${songData.difficulty}, ${songData.gender}곡, 위험포인트: ${songData.dangerPoints?.join(" / ")||"없음"}`:"DB 미수록"}
-계산 내역: ${keyBreakdown.map(b=>`${b.label}(${b.value>0?"+"+b.value:b.value}키)`).join(" + ")}
+- 수치 계산 키: ${calcKeyStr} (내역: ${keyBreakdown.map(b=>`${b.label}${b.value>0?"+"+b.value:b.value}키`).join(", ")||"음역 미설정"})
+- DB 데이터: ${songData?`최고음 ${songData.maxNote}, 난이도 ${songData.difficulty}, ${songData.gender}곡`:"DB 미수록 — AI가 직접 음역 분석 필요"}
 
 [곡별 실제 음역 지식]
 - 야생화(박효신): Ab장조 시작→후반 C장조(4키 전조), 최고음 C5, 남성 중음 기준 -1~-2키
@@ -1102,7 +1105,7 @@ JSON만 반환 (마크다운 없이):
   "feasibility": "부르기 쉬움 또는 도전적 또는 키 조절 필수",
   "recommendedKey": "${calcKeyStr}",
   "keyLogic": "왜 이 키인지 수치 근거 포함해서 구체적으로",
-  "keyBreakdown": ${JSON.stringify(keyBreakdown)},
+  "keyBreakdown": ${JSON.stringify(keyBreakdown).replace(/"/g,"'")},
   "conditionTip": ${cond?'"컨디션 기반 한 문장"':"null"},
   "situationStrategy": ${sit?'"상황 기반 두 문장"':"null"},
   "vocalTips": ["구체적 팁1","구체적 팁2","구체적 팁3"],
@@ -1128,8 +1131,8 @@ JSON만 반환 (마크다운 없이):
       const r = parsed || {
         voiceSummary:"분석 중 오류가 발생했어요. 다시 시도해주세요.",
         feasibility:"키 조절 필수",
-        recommendedKey:"-2키",
-        keyLogic:"기준곡 음역 대비 추천값입니다.",
+        recommendedKey:calcKeyStr,
+        keyLogic:"기준곡 음역 대비 계산된 추천값입니다.",
         conditionTip:null, situationStrategy:null,
         vocalTips:["후렴 전 깊게 숨 들이쉬기","고음 구간에서 힘 빼기","끝 음절 부드럽게"],
         practiceSteps:[
@@ -1139,12 +1142,15 @@ JSON만 반환 (마크다운 없이):
         ],
         setlist:null,
         alternatives:[
-          {title:"취중고백",artist:"김민석",tj:"23012",reason:"비슷한 음역의 감성 발라드",matchScore:9},
-          {title:"걱정말아요 그대",artist:"이적",tj:"25080",reason:"따뜻하고 편안한 중저음",matchScore:8},
-          {title:"거리에서",artist:"성시경",tj:"16040",reason:"안정적인 중저음 발라드",matchScore:7},
+          {title:"취중고백",artist:"김민석",tj:"62994",reason:"비슷한 음역의 감성 발라드",matchScore:9},
+          {title:"걱정말아요 그대",artist:"이적",tj:"45592",reason:"따뜻하고 편안한 중저음",matchScore:8},
+          {title:"거리에서",artist:"성시경",tj:"16503",reason:"안정적인 중저음 발라드",matchScore:7},
         ],
-        repoTag:"prac", confidence:7, vibes:["감성","밤","발라드"],
+        repoTag:"prac", confidence:7, vibes:["감성","발라드"],
       };
+      // 키는 항상 코드 계산값으로 고정
+      r.recommendedKey = calcKeyStr;
+      r.keyBreakdown = keyBreakdown;
 
       const entry = {
         id:Date.now(), target:targetSong, comfSongs:valid,
