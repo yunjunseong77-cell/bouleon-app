@@ -1,0 +1,5122 @@
+{
+  "야생화": {
+    "title": "야생화",
+    "artist": "박효신",
+    "tj": "38263",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 50,
+    "highNoteCount": 3,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 2,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 2
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "남성곡"
+    ]
+  },
+  "눈의꽃(미안하다사랑한다OST)": {
+    "title": "눈의꽃(미안하다사랑한다OST)",
+    "artist": "박효신",
+    "tj": "14238",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 71,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "사랑했지만": {
+    "title": "사랑했지만",
+    "artist": "김광석",
+    "tj": "1102",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "이등병의편지": {
+    "title": "이등병의편지",
+    "artist": "김광석",
+    "tj": "1999",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 62,
+    "minNote": 43,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 3,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "서른즈음에": {
+    "title": "서른즈음에",
+    "artist": "김광석",
+    "tj": "2337",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 65,
+    "minNote": 46,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "그날들": {
+    "title": "그날들",
+    "artist": "김광석",
+    "tj": "4248",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 47,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "거리에서": {
+    "title": "거리에서",
+    "artist": "성시경",
+    "tj": "16503",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "너의모든순간(별에서온그대OST)": {
+    "title": "너의모든순간(별에서온그대OST)",
+    "artist": "성시경",
+    "tj": "38028",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 47,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "두사람": {
+    "title": "두사람",
+    "artist": "성시경",
+    "tj": "15320",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "희재(국화꽃향기OST)": {
+    "title": "희재(국화꽃향기OST)",
+    "artist": "성시경",
+    "tj": "10842",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 47,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "잘지내나요": {
+    "title": "잘지내나요",
+    "artist": "성시경",
+    "tj": "14762",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "취중고백": {
+    "title": "취중고백",
+    "artist": "김민석",
+    "tj": "62994",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 65,
+    "minNote": 47,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "붉은 노을": {
+    "title": "붉은 노을",
+    "artist": "이문세",
+    "tj": "1842",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 62,
+    "minNote": 43,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 3,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "벚꽃 엔딩": {
+    "title": "벚꽃 엔딩",
+    "artist": "버스커 버스커",
+    "tj": "35184",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "여수밤바다": {
+    "title": "여수밤바다",
+    "artist": "버스커 버스커",
+    "tj": "35192",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "선물": {
+    "title": "선물",
+    "artist": "멜로망스",
+    "tj": "49941",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "그대라는사치": {
+    "title": "그대라는사치",
+    "artist": "한동근",
+    "tj": "47835",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "하늘을 달리다": {
+    "title": "하늘을 달리다",
+    "artist": "이적",
+    "tj": "11378",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "걱정말아요그대(응답하라1988 OST)": {
+    "title": "걱정말아요그대(응답하라1988 OST)",
+    "artist": "이적",
+    "tj": "45592",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "안아줘": {
+    "title": "안아줘",
+    "artist": "정준일",
+    "tj": "34687",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "그래아니까": {
+    "title": "그래아니까",
+    "artist": "정준일",
+    "tj": "24394",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "내가 저지른 사랑": {
+    "title": "내가 저지른 사랑",
+    "artist": "임창정",
+    "tj": "46920",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "소주한잔": {
+    "title": "소주한잔",
+    "artist": "임창정",
+    "tj": "11491",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "그때또다시": {
+    "title": "그때또다시",
+    "artist": "임창정",
+    "tj": "3889",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "사랑했나봐": {
+    "title": "사랑했나봐",
+    "artist": "이정",
+    "tj": "12024",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 66,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "광화문연가": {
+    "title": "광화문연가",
+    "artist": "이문세",
+    "tj": "1624",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 62,
+    "minNote": 43,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 3,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "옛사랑": {
+    "title": "옛사랑",
+    "artist": "이문세",
+    "tj": "916",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 60,
+    "minNote": 43,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 4,
+      "male_mid": 4,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 3,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "가을이오면": {
+    "title": "가을이오면",
+    "artist": "이문세",
+    "tj": "1925",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "촛불하나": {
+    "title": "촛불하나",
+    "artist": "god",
+    "tj": "9247",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 66,
+    "minNote": 47,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "잊혀진계절": {
+    "title": "잊혀진계절",
+    "artist": "이용",
+    "tj": "512",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "기억을걷는시간": {
+    "title": "기억을걷는시간",
+    "artist": "넬",
+    "tj": "19390",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "나만바라봐": {
+    "title": "나만바라봐",
+    "artist": "태양",
+    "tj": "19645",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "아메리카노": {
+    "title": "아메리카노",
+    "artist": "10CM",
+    "tj": "32985",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 46,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "봄이좋냐??": {
+    "title": "봄이좋냐??",
+    "artist": "10CM",
+    "tj": "46262",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 3,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "나를사랑하지않는나에게": {
+    "title": "나를사랑하지않는나에게",
+    "artist": "폴킴",
+    "tj": "24280",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "허전해": {
+    "title": "허전해",
+    "artist": "폴킴",
+    "tj": "24262",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "나를좋아하지않는그대에게": {
+    "title": "나를좋아하지않는그대에게",
+    "artist": "박원",
+    "tj": "46477",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "축제": {
+    "title": "축제",
+    "artist": "멜로망스",
+    "tj": "24466",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "나나나": {
+    "title": "나나나",
+    "artist": "멜로망스",
+    "tj": "24773",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "좋은 날": {
+    "title": "좋은 날",
+    "artist": "아이유",
+    "tj": "33393",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 5,
+    "maxNote": 76,
+    "minNote": 55,
+    "highNoteCount": 3,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 5
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "밤편지": {
+    "title": "밤편지",
+    "artist": "아이유",
+    "tj": "48879",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "에잇": {
+    "title": "에잇",
+    "artist": "아이유",
+    "tj": "62805",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Celebrity": {
+    "title": "Celebrity",
+    "artist": "아이유",
+    "tj": "62883",
+    "gender": "female",
+    "genre": "팝",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "팝",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "잔소리": {
+    "title": "잔소리",
+    "artist": "아이유",
+    "tj": "62319",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "분홍신": {
+    "title": "분홍신",
+    "artist": "아이유",
+    "tj": "37491",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 71,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "사랑이 지나가면": {
+    "title": "사랑이 지나가면",
+    "artist": "아이유",
+    "tj": "38467",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "스물셋": {
+    "title": "스물셋",
+    "artist": "아이유",
+    "tj": "45509",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "팔레트 (Feat. G-DRAGON)": {
+    "title": "팔레트 (Feat. G-DRAGON)",
+    "artist": "아이유",
+    "tj": "62444",
+    "gender": "female",
+    "genre": "팝",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "팝",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "어떻게이별까지사랑하겠어, 널사랑하는거지": {
+    "title": "어떻게이별까지사랑하겠어, 널사랑하는거지",
+    "artist": "AKMU",
+    "tj": "24183",
+    "gender": "female",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "한숨": {
+    "title": "한숨",
+    "artist": "이하이",
+    "tj": "46165",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 74,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 2,
+      "male_high": 4,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 5
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "우주를 줄게": {
+    "title": "우주를 줄게",
+    "artist": "볼빨간사춘기",
+    "tj": "46875",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 71,
+    "minNote": 50,
+    "highNoteCount": 3,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "썸탈꺼야": {
+    "title": "썸탈꺼야",
+    "artist": "볼빨간사춘기",
+    "tj": "62490",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "비도오고그래서": {
+    "title": "비도오고그래서",
+    "artist": "헤이즈(Feat.신용재)",
+    "tj": "49834",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "저별": {
+    "title": "저별",
+    "artist": "헤이즈",
+    "tj": "48301",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "떨어지는낙엽까지도": {
+    "title": "떨어지는낙엽까지도",
+    "artist": "헤이즈",
+    "tj": "24285",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "만추": {
+    "title": "만추",
+    "artist": "헤이즈(Feat.크러쉬)",
+    "tj": "24292",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "갈바람": {
+    "title": "갈바람",
+    "artist": "이선희",
+    "tj": "931",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "되돌리다": {
+    "title": "되돌리다",
+    "artist": "이승기",
+    "tj": "36121",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "만약에(쾌도홍길동OST)": {
+    "title": "만약에(쾌도홍길동OST)",
+    "artist": "태연(소녀시대)",
+    "tj": "19187",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Fine": {
+    "title": "Fine",
+    "artist": "태연",
+    "tj": "48733",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "사계(Four Seasons)": {
+    "title": "사계(Four Seasons)",
+    "artist": "태연",
+    "tj": "53710",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "총맞은 것처럼": {
+    "title": "총맞은 것처럼",
+    "artist": "백지영",
+    "tj": "30425",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "8282": {
+    "title": "8282",
+    "artist": "다비치",
+    "tj": "30868",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "봄날": {
+    "title": "봄날",
+    "artist": "방탄소년단",
+    "tj": "48636",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 2,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 2,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Dynamite": {
+    "title": "Dynamite",
+    "artist": "방탄소년단",
+    "tj": "62837",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "작은 것들을위한시(Boy With Luv)": {
+    "title": "작은 것들을위한시(Boy With Luv)",
+    "artist": "방탄소년단(Feat.Halsey)",
+    "tj": "53816",
+    "gender": "male",
+    "genre": "팝",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 2,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 2,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "팝",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Permission to Dance": {
+    "title": "Permission to Dance",
+    "artist": "방탄소년단",
+    "tj": "62944",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "으르렁(Growl)": {
+    "title": "으르렁(Growl)",
+    "artist": "EXO",
+    "tj": "37193",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "중독(Overdose)": {
+    "title": "중독(Overdose)",
+    "artist": "EXO-K",
+    "tj": "38422",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 2,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 2
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "댄스",
+      "고음주의",
+      "남성곡"
+    ]
+  },
+  "Ko Ko Bop": {
+    "title": "Ko Ko Bop",
+    "artist": "EXO",
+    "tj": "49987",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Electric Kiss": {
+    "title": "Electric Kiss",
+    "artist": "EXO",
+    "tj": "28839",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "사랑을했다(LOVE SCENARIO)": {
+    "title": "사랑을했다(LOVE SCENARIO)",
+    "artist": "iKON",
+    "tj": "59072",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 2,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 2,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "취향저격": {
+    "title": "취향저격",
+    "artist": "iKON",
+    "tj": "29766",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "아주 NICE": {
+    "title": "아주 NICE",
+    "artist": "세븐틴",
+    "tj": "46638",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "아낀다": {
+    "title": "아낀다",
+    "artist": "세븐틴",
+    "tj": "29341",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "예쁘다": {
+    "title": "예쁘다",
+    "artist": "세븐틴",
+    "tj": "46339",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "만세": {
+    "title": "만세",
+    "artist": "세븐틴",
+    "tj": "29756",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "HIP": {
+    "title": "HIP",
+    "artist": "마마무",
+    "tj": "24504",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "고고베베(gogobebe)": {
+    "title": "고고베베(gogobebe)",
+    "artist": "마마무",
+    "tj": "53657",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "롤린(Rollin')": {
+    "title": "롤린(Rollin')",
+    "artist": "브레이브걸스",
+    "tj": "48824",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "ELEVEN": {
+    "title": "ELEVEN",
+    "artist": "IVE",
+    "tj": "62993",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "MIROH": {
+    "title": "MIROH",
+    "artist": "Stray Kids",
+    "tj": "53716",
+    "gender": "male",
+    "genre": "힙합",
+    "difficulty": 4,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 3,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "힙합",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "뱅뱅뱅(Bang Bang Bang)": {
+    "title": "뱅뱅뱅(Bang Bang Bang)",
+    "artist": "빅뱅",
+    "tj": "29337",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "거짓말": {
+    "title": "거짓말",
+    "artist": "빅뱅",
+    "tj": "18553",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "마지막인사": {
+    "title": "마지막인사",
+    "artist": "빅뱅",
+    "tj": "18901",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "사랑먼지": {
+    "title": "사랑먼지",
+    "artist": "빅뱅",
+    "tj": "35070",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Next Level": {
+    "title": "Next Level",
+    "artist": "aespa",
+    "tj": "62942",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "보름달": {
+    "title": "보름달",
+    "artist": "선미(Feat.Lena)",
+    "tj": "38040",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "마리아(Maria)": {
+    "title": "마리아(Maria)",
+    "artist": "화사(마마무)",
+    "tj": "62828",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "멍청이(twit)": {
+    "title": "멍청이(twit)",
+    "artist": "화사(마마무)",
+    "tj": "53502",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "아름다워(Beautiful)": {
+    "title": "아름다워(Beautiful)",
+    "artist": "몬스타엑스",
+    "tj": "48863",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 1,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 1,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Fighter": {
+    "title": "Fighter",
+    "artist": "몬스타엑스",
+    "tj": "48051",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 70,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 2,
+      "male_high": 3,
+      "female_low": 1,
+      "female_mid": 2,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "이제나만믿어요": {
+    "title": "이제나만믿어요",
+    "artist": "임영웅",
+    "tj": "62817",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "별빛같은나의사랑아": {
+    "title": "별빛같은나의사랑아",
+    "artist": "임영웅",
+    "tj": "62910",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 2,
+    "maxNote": 65,
+    "minNote": 47,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "막걸리한잔": {
+    "title": "막걸리한잔",
+    "artist": "영탁",
+    "tj": "54955",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 45,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "사랑은아무나하나": {
+    "title": "사랑은아무나하나",
+    "artist": "태진아",
+    "tj": "8834",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 2,
+    "maxNote": 62,
+    "minNote": 43,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 3,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "테스형!": {
+    "title": "테스형!",
+    "artist": "나훈아",
+    "tj": "62846",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "홍시(울엄마)": {
+    "title": "홍시(울엄마)",
+    "artist": "나훈아",
+    "tj": "15263",
+    "gender": "male",
+    "genre": "트로트",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 1,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "트로트",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "바람의노래": {
+    "title": "바람의노래",
+    "artist": "조용필",
+    "tj": "3880",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 66,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "킬리만자로의표범": {
+    "title": "킬리만자로의표범",
+    "artist": "조용필",
+    "tj": "914",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "꿈": {
+    "title": "꿈",
+    "artist": "조용필",
+    "tj": "693",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 66,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "우아해(Woo ah)": {
+    "title": "우아해(Woo ah)",
+    "artist": "크러쉬",
+    "tj": "46395",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Beautiful(도깨비OST)": {
+    "title": "Beautiful(도깨비OST)",
+    "artist": "크러쉬",
+    "tj": "48373",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "천둥벌거숭이": {
+    "title": "천둥벌거숭이",
+    "artist": "지코(Feat.재키와이,염따)",
+    "tj": "24205",
+    "gender": "male",
+    "genre": "힙합",
+    "difficulty": 3,
+    "maxNote": 65,
+    "minNote": 47,
+    "highNoteCount": 3,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "힙합",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "사람": {
+    "title": "사람",
+    "artist": "지코",
+    "tj": "24211",
+    "gender": "male",
+    "genre": "힙합",
+    "difficulty": 2,
+    "maxNote": 63,
+    "minNote": 46,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 5,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "힙합",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "네가없는밤": {
+    "title": "네가없는밤",
+    "artist": "BE'O(비오)(Feat.ASH ISLAND)(Prod.그레이)",
+    "tj": "62998",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Counting Stars": {
+    "title": "Counting Stars",
+    "artist": "BE'O(비오)(Feat.빈지노)",
+    "tj": "62992",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Close Your Eyes(경이로운소문OST)": {
+    "title": "Close Your Eyes(경이로운소문OST)",
+    "artist": "홍이삭",
+    "tj": "42850",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "노래방에서": {
+    "title": "노래방에서",
+    "artist": "장범준",
+    "tj": "53705",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "흔들리는꽃들속에서네샴푸향이느껴진거야(멜로가체질OST)": {
+    "title": "흔들리는꽃들속에서네샴푸향이느껴진거야(멜로가체질OST)",
+    "artist": "장범준",
+    "tj": "62717",
+    "gender": "male",
+    "genre": "인디",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 3,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "인디",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "동네술집": {
+    "title": "동네술집",
+    "artist": "허각,정인",
+    "tj": "29283",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 64,
+    "minNote": 46,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 5,
+      "male_high": 5,
+      "female_low": 3,
+      "female_mid": 4,
+      "female_high": 3
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "남성곡"
+    ]
+  },
+  "My Heart": {
+    "title": "My Heart",
+    "artist": "허각",
+    "tj": "33176",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "오르막길": {
+    "title": "오르막길",
+    "artist": "윤종신(With 정인)",
+    "tj": "35435",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 66,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 5,
+      "female_low": 2,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "나쁜놈": {
+    "title": "나쁜놈",
+    "artist": "씨스타(Feat.매드클라운)",
+    "tj": "29435",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "나혼자(Alone)": {
+    "title": "나혼자(Alone)",
+    "artist": "씨스타",
+    "tj": "35232",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Touch My Body": {
+    "title": "Touch My Body",
+    "artist": "씨스타",
+    "tj": "38776",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Loving U(러빙유)": {
+    "title": "Loving U(러빙유)",
+    "artist": "씨스타",
+    "tj": "35535",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "I Swear": {
+    "title": "I Swear",
+    "artist": "씨스타",
+    "tj": "38971",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "내가제일잘나가": {
+    "title": "내가제일잘나가",
+    "artist": "2NE1",
+    "tj": "34084",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 71,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 4,
+      "male_high": 4,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Fire": {
+    "title": "Fire",
+    "artist": "2NE1",
+    "tj": "31146",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "댄스",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "아파(Slow)": {
+    "title": "아파(Slow)",
+    "artist": "2NE1",
+    "tj": "33060",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 4,
+    "maxNote": 72,
+    "minNote": 52,
+    "highNoteCount": 2,
+    "breathDifficulty": 3,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 3,
+      "date": 2,
+      "work": 3,
+      "solo": 5,
+      "wedding": 2
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 3,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [
+      "고음 구간 주의"
+    ],
+    "tags": [
+      "발라드",
+      "고음주의",
+      "여성곡"
+    ]
+  },
+  "WANNABE": {
+    "title": "WANNABE",
+    "artist": "ITZY",
+    "tj": "62788",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "음오아예(Um Oh Ah Yeh)": {
+    "title": "음오아예(Um Oh Ah Yeh)",
+    "artist": "마마무",
+    "tj": "29415",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "NoNoNo": {
+    "title": "NoNoNo",
+    "artist": "에이핑크",
+    "tj": "37076",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Mr. Chu(On Stage)": {
+    "title": "Mr. Chu(On Stage)",
+    "artist": "에이핑크",
+    "tj": "38290",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Luv": {
+    "title": "Luv",
+    "artist": "에이핑크",
+    "tj": "39378",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Remember": {
+    "title": "Remember",
+    "artist": "에이핑크",
+    "tj": "29533",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "성인식": {
+    "title": "성인식",
+    "artist": "박지윤",
+    "tj": "8999",
+    "gender": "female",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 70,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 4,
+      "female_mid": 5,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "심쿵해(Heart Attack)": {
+    "title": "심쿵해(Heart Attack)",
+    "artist": "AOA",
+    "tj": "29413",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "짧은치마(Miniskirt)": {
+    "title": "짧은치마(Miniskirt)",
+    "artist": "AOA",
+    "tj": "37923",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Gee": {
+    "title": "Gee",
+    "artist": "소녀시대",
+    "tj": "30627",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "소원을말해봐(Genie)": {
+    "title": "소원을말해봐(Genie)",
+    "artist": "소녀시대",
+    "tj": "31311",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Oh!": {
+    "title": "Oh!",
+    "artist": "소녀시대",
+    "tj": "32153",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "Run Devil Run": {
+    "title": "Run Devil Run",
+    "artist": "소녀시대",
+    "tj": "32358",
+    "gender": "female",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "내 손을 잡아": {
+    "title": "내 손을 잡아",
+    "artist": "아이유",
+    "tj": "33962",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 2,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 1,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 1,
+    "situations": {
+      "friend": 4,
+      "date": 5,
+      "work": 4,
+      "solo": 5,
+      "wedding": 4
+    },
+    "voiceMatch": {
+      "male_low": 3,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "안전곡",
+      "여성곡"
+    ]
+  },
+  "너랑 나": {
+    "title": "너랑 나",
+    "artist": "아이유",
+    "tj": "34700",
+    "gender": "female",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 69,
+    "minNote": 50,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 2,
+      "male_mid": 4,
+      "male_high": 3,
+      "female_low": 5,
+      "female_mid": 4,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "여성곡"
+    ]
+  },
+  "끝사랑": {
+    "title": "끝사랑",
+    "artist": "김범수",
+    "tj": "34049",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "보고싶다": {
+    "title": "보고싶다",
+    "artist": "김범수",
+    "tj": "11095",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "매일듣는노래(A Daily Song)": {
+    "title": "매일듣는노래(A Daily Song)",
+    "artist": "황치열",
+    "tj": "49767",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 48,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "하루하루": {
+    "title": "하루하루",
+    "artist": "빅뱅",
+    "tj": "19974",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "천국": {
+    "title": "천국",
+    "artist": "빅뱅",
+    "tj": "19994",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "If You": {
+    "title": "If You",
+    "artist": "빅뱅",
+    "tj": "29456",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Loser": {
+    "title": "Loser",
+    "artist": "빅뱅",
+    "tj": "29214",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Bae Bae": {
+    "title": "Bae Bae",
+    "artist": "빅뱅",
+    "tj": "29215",
+    "gender": "male",
+    "genre": "R&B",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "R&B",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "에라모르겠다": {
+    "title": "에라모르겠다",
+    "artist": "빅뱅",
+    "tj": "48350",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 3,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Hands Up": {
+    "title": "Hands Up",
+    "artist": "2PM",
+    "tj": "34060",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "우리집": {
+    "title": "우리집",
+    "artist": "2PM",
+    "tj": "29386",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "10점만점에10점": {
+    "title": "10점만점에10점",
+    "artist": "2PM",
+    "tj": "30121",
+    "gender": "male",
+    "genre": "댄스",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "댄스",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Heartbeat": {
+    "title": "Heartbeat",
+    "artist": "2PM",
+    "tj": "31851",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 68,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 4,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  },
+  "Only You": {
+    "title": "Only You",
+    "artist": "2PM",
+    "tj": "30408",
+    "gender": "male",
+    "genre": "발라드",
+    "difficulty": 3,
+    "maxNote": 67,
+    "minNote": 49,
+    "highNoteCount": 2,
+    "breathDifficulty": 2,
+    "rhythmDifficulty": 2,
+    "situations": {
+      "friend": 4,
+      "date": 4,
+      "work": 4,
+      "solo": 5,
+      "wedding": 3
+    },
+    "voiceMatch": {
+      "male_low": 1,
+      "male_mid": 3,
+      "male_high": 5,
+      "female_low": 1,
+      "female_mid": 3,
+      "female_high": 4
+    },
+    "dangerPoints": [],
+    "tags": [
+      "발라드",
+      "보통",
+      "남성곡"
+    ]
+  }
+}
