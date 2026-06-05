@@ -107,6 +107,26 @@ const VOICE_TYPES = [
 ];
 
 // ─────────────────────────────────────────────────────────────────
+// SONGS DB 로드 (public/songs_db.json)
+// ─────────────────────────────────────────────────────────────────
+let SONGS_DB = null;
+const loadSongsDB = async () => {
+  if (SONGS_DB) return SONGS_DB;
+  try { const res = await fetch("/songs_db.json"); SONGS_DB = await res.json(); }
+  catch(e) { SONGS_DB = {}; }
+  return SONGS_DB;
+};
+const findSongData = async (title) => {
+  const db = await loadSongsDB();
+  if (!title || !db) return null;
+  const t = title.replace(/\s+/g,"").toLowerCase();
+  return Object.values(db).find(s =>
+    s.title.replace(/\s+/g,"").toLowerCase().includes(t) ||
+    t.includes(s.title.replace(/\s+/g,"").toLowerCase())
+  ) || null;
+};
+
+// ─────────────────────────────────────────────────────────────────
 // LOCAL STORAGE
 // ─────────────────────────────────────────────────────────────────
 const ls = {
@@ -759,6 +779,23 @@ const ResultTab = ({ result, targetSong, situation, uid, repo, saveRepo, setTab 
           {r.recommendedKey}
         </div>
         <p style={{margin:"10px 0 0",fontSize:12,color:C.mid,lineHeight:1.6}}>{r.keyLogic}</p>
+        {/* 키 계산 내역 */}
+        {r.keyBreakdown?.length > 0 && (
+          <div style={{marginTop:12,padding:"10px 12px",borderRadius:10,
+            background:"rgba(255,255,255,0.04)",border:`1px solid ${C.border}`,textAlign:"left"}}>
+            <div style={{fontSize:10,color:C.dim,marginBottom:6,fontWeight:700}}>📊 키 계산 내역</div>
+            {r.keyBreakdown.map((b,i)=>(
+              <div key={i} style={{display:"flex",justifyContent:"space-between",
+                fontSize:11,marginBottom:2,color:C.mid}}>
+                <span>{b.label}</span>
+                <span style={{fontWeight:700,
+                  color:b.value>0?C.green:b.value<0?C.rose:C.dim}}>
+                  {b.value>0?`+${b.value}키`:b.value<0?`${b.value}키`:"±0"}
+                </span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
       {/* 컨디션 + 상황 */}
@@ -969,6 +1006,29 @@ function MainApp({ user, onLogout }) {
       .map(e => `- "${e.songTitle}": ${e.evals.join(", ")} (${e.date})`)
       .join("\n") || "없음";
 
+    // songs_db 조회 + 수치 키 계산
+    const songData = await findSongData(targetSong.title);
+    const VOICE_COMFORTABLE = { male_low:57,male_mid:62,male_high:65,female_low:67,female_mid:71,female_high:74 };
+    let keyAdj = 0;
+    const keyBreakdown = [];
+    if (songData && voiceType) {
+      const comfMax = VOICE_COMFORTABLE[voiceType] || 62;
+      let baseAdj = -(songData.maxNote - comfMax);
+      if (voiceType.includes("male")   && songData.gender==="female") baseAdj = Math.min(baseAdj,-3);
+      if (voiceType.includes("female") && songData.gender==="male")   baseAdj = Math.max(baseAdj, 3);
+      keyAdj += baseAdj;
+      keyBreakdown.push({ label:"음역 차이", value:baseAdj });
+    }
+    const sitAdj = sit?.id==="date"?-1:sit?.id==="work"?-1:sit?.id==="solo"?1:sit?.id==="wedding"?-2:0;
+    if (sitAdj) { keyAdj+=sitAdj; keyBreakdown.push({label:`상황(${sit.label})`,value:sitAdj}); }
+    const condAdj = cond?.id==="great"?1:cond?.id==="bad"?-1:cond?.id==="sick"?-2:0;
+    if (condAdj) { keyAdj+=condAdj; keyBreakdown.push({label:`컨디션(${cond.label})`,value:condAdj}); }
+    const prevRecFb = history.find(h=>h.target?.title===targetSong.title&&h.rating);
+    if (prevRecFb?.rating?.includes("고음이 어려웠어요")) { keyAdj-=2; keyBreakdown.push({label:"이전 피드백",value:-2}); }
+    else if (prevRecFb?.rating?.includes("호흡이 부족했어요")) { keyAdj-=1; keyBreakdown.push({label:"이전 피드백",value:-1}); }
+    keyAdj = Math.max(-7, Math.min(7, keyAdj));
+    const calcKeyStr = keyAdj===0?"원키":keyAdj>0?`+${keyAdj}키`:`${keyAdj}키`;
+
     const prompt = `당신은 대한민국 최고의 노래방 AI 코치 "부를레옹"입니다.
 사용자의 과거 피드백과 음역대를 철저히 반영해서 개인화된 키를 추천해주세요.
 
@@ -1006,6 +1066,8 @@ ${evalSummary}
 - 상황: ${sit?sit.emoji+sit.label:"미선택"}
 - 목 컨디션: ${cond?cond.emoji+cond.label:"미선택"}
 - 메모: ${extraNote||"없음"}
+- 수치 계산 키: ${calcKeyStr} (내역: ${keyBreakdown.map(b=>`${b.label}${b.value>0?"+"+b.value:b.value}키`).join(", ")||"음역 미설정"})
+- DB 데이터: ${songData?`최고음 ${songData.maxNote}, 난이도 ${songData.difficulty}, ${songData.gender}곡`:"DB 미수록 — AI가 직접 음역 분석 필요"}
 
 [곡별 실제 음역 지식]
 - 야생화(박효신): Ab장조 시작→후반 C장조(4키 전조), 최고음 C5, 남성 중음 기준 -1~-2키
@@ -1027,8 +1089,9 @@ JSON만 반환 (마크다운 없이):
 {
   "voiceSummary": "음역 분석 2문장 (성별+음역 타입 기반, 친근하게)",
   "feasibility": "부르기 쉬움 또는 도전적 또는 키 조절 필수",
-  "recommendedKey": "0키 또는 -2키 또는 +3키 형식 (과거 피드백+음역 반영)",
-  "keyLogic": "왜 이 키인지 과거 피드백과 음역 기반으로 구체적으로",
+  "recommendedKey": "${calcKeyStr} 또는 AI 판단 키 (수치 계산 기반, DB 없으면 AI가 직접 계산)",
+  "keyLogic": "왜 이 키인지 수치 근거 포함해서 구체적으로",
+  "keyBreakdown": ${JSON.stringify(keyBreakdown)},
   "conditionTip": ${cond?'"컨디션 기반 한 문장"':"null"},
   "situationStrategy": ${sit?'"상황 기반 두 문장"':"null"},
   "vocalTips": ["구체적 팁1","구체적 팁2","구체적 팁3"],
@@ -1074,7 +1137,7 @@ JSON만 반환 (마크다운 없이):
 
       const entry = {
         id:Date.now(), target:targetSong, comfSongs:valid,
-        situation, condition, result:r,
+        situation, condition, result:{...r, keyBreakdown},
         date:new Date().toLocaleDateString("ko-KR"), rating:null
       };
       setResult(r);
