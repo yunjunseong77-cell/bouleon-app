@@ -816,6 +816,7 @@ const HomeTab = ({ comfSongs, setComfSongs, targetSong, setTargetSong,
             marginBottom: 12,
             animation: `fadeUp 0.4s ${idx * 0.06}s ease both`,
             overflow: "visible",
+            zIndex: 4 - idx,
           }}>
           <div style={{ display: "flex", alignItems: "flex-start", gap: 14, marginBottom: 16 }}>
             <div style={{
